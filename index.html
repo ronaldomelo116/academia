@@ -25,6 +25,7 @@
                 <li><a href="#inicio">INÍCIO</a></li>
                 <li><a href="#beneficios">BENEFÍCIOS</a></li>
                 <li><a href="#planos">PLANOS</a></li>
+                <li><a href="#faq">DÚVIDAS (FAQ)</a></li>
                 <li><a href="#matricula" class="btn-destaque">MATRICULE-SE</a></li>
             </ul>
         </nav>
@@ -71,7 +72,7 @@
         </section>
 
         <!-- seção planos-->
-         <section id="planos" class="section-planos">
+        <section id="planos" class="section-planos">
             <h2>Nossos Planos</h2>
             <div class="container-cards">
                 <article class="card-plano">
@@ -95,30 +96,64 @@
                     <a href="#matricula" class="btn-plano principal">Escolher Top</a>
                 </article>
             </div>
-         </section>
+        </section>
+        <!-- seção perguntas-->
+        <section id="faq" class="section-faq">
+            <h2>Perguntas Frequentes</h2>
+            <p class="faq-subtitulo">Tire suas duvidas e venha treinar com a gente.</p>
 
-         <section id="matricula" class="section-matricula">
+            <div class="conteiner-faq">
+                <details class="item-faq">
+                    <summary>Vocês cobram taxa de matricula ou concelamento?</summary>
+                    <p>Não! Acreditamos na transparencia. Nossos planos não possuem taxa de adesão, anuidade escondida
+                        ou multas absurdas de cancelamento (desde que respeitado o aviso prévio de 30 dias).</p>
+                </details>
+
+                <details class="item-faq">
+                    <summary>A academia conta com instrutores para montar meu treino?</summary>
+                    <p>Sim. Todos os nossos planos incluem avaliação inicial e montagem de ficha de treino pelos nossos
+                        professores, que estarão sempre no salão para corrigir a execução dos movimentos.</p>
+                </details>
+
+                <details class="item-faq">
+                    <summary>A partir de qual idade posso me matricular?</summary>
+                    <p>Aceitamos alunos a partir de 14 anos de idade, desde que a matrícula seja assinada
+                        presencialmente por um pai ou responsável legal.</p>
+                </details>
+
+                <details class="item-faq">
+                    <summary>As aulas de Pilates e Spinning estão inclusas no plano Basic?</summary>
+                    <p>As aulas coletivas são benefícios exclusivos do <strong>Plano Top</strong>.
+                        O plano Basic contempla apenas o acesso livre ao salão de musculação e área de peso livre.</p>
+                </details>
+            </div>
+
+        </section>
+        <!-- seção matricula-->
+        <section id="matricula" class="section-matricula">
             <h2>Dê o primeiro passo hoje</h2>
             <p>Deixe seus dados e nossa equipe entrará em contato via WhatsApp para agendar sua aula experimental.</p>
 
-         <form action="#" method="post" class="formulario-contato">
-            <div class="grupo-input">
-                <label for="nome">Nome Completo</label>
-                <input type="text" id="nome" nome="nome" placeholder="Digite seu nome" required autocomplete="nome">
-            </div>
+            <form action="#" method="post" class="formulario-contato">
+                <div class="grupo-input">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" nome="nome" placeholder="Digite seu nome" required autocomplete="nome">
+                </div>
 
-            <div class="grupo-input">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" nome="email" placeholder="seu@email.com" required autocomplete="email">
-            </div>
+                <div class="grupo-input">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" nome="email" placeholder="seu@email.com" required
+                        autocomplete="email">
+                </div>
 
-            <div class="grupo-input">
-                <label for="telefone">WhatsApp/telefone</label>
-                <input type="tel" id="telefone" nome="telefone" placeholder="(84) 90000-0000" required autocomplete="tel">
-            </div>
+                <div class="grupo-input">
+                    <label for="telefone">WhatsApp/telefone</label>
+                    <input type="tel" id="telefone" nome="telefone" placeholder="(84) 90000-0000" required
+                        autocomplete="tel">
+                </div>
 
-            <button type="submit" class="btn-enviar">Quero me matricular</button>
-         </form>
+                <button type="submit" class="btn-enviar">Quero me matricular</button>
+            </form>
 
         </section>
 
