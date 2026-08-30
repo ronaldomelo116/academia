@@ -86,3 +86,9 @@ linksMenu.forEach(link => {
         icone.classList.add('bi-list');
     });
 });
+
+
+/* Defesa contra Clickjacking: Impede clonagem em iframes */
+if (window.top !== window.self) {
+    window.top.location = window.self.location;
+}
