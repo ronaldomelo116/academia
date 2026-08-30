@@ -42,13 +42,14 @@ btnEnviar.addEventListener('click', () => {
         return;
     }
 
+    const nomeSeguro = encodeURIComponent(nome);
+    const emailSeguro = encodeURIComponent(email);
 
-    const mensagem = `Olá, vim pelo site! Gostaria de agendar uma aula experimental.%0A%0A*Meus dados:*%0ANome: ${nome}%0AE-mail: ${email}`;
+    const mensagem = `Olá, vim pelo site! Gostaria de agendar uma aula experimental.%0A%0A*Meus dados:*%0ANome: ${nomeSeguro}%0AE-mail: ${emailSeguro}`;
     const numeroWhatsApp = '5584900000000';
     const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
 
     window.open(url, '_blank');
-
     document.getElementById('form-matricula').reset();
 });
 
