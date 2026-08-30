@@ -30,11 +30,10 @@ btnEnviar.addEventListener('click', () => {
     const email = document.getElementById('email').value;
 
     if (nome === '' || email === '') {
-
         alert('Por favor, preencha seu Nome e E-mail para continuar!');
         return;
-
     }
+
 
     const mensagem = `Olá, vim pelo site! Gostaria de agendar uma aula experimental.%0A%0A*Meus dados:*%0ANome: ${nome}%0AE-mail: ${email}`;
     const numeroWhatsApp = '5584900000000';
