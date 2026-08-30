@@ -374,7 +374,7 @@ ul {
 }
 
 .banner-parallax {
-    background-image: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url('/img/imagem\ de\ fundo.jpg');
+    background-image: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url('./img/imagem-de-fundo.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
