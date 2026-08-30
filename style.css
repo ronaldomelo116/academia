@@ -21,7 +21,8 @@
     --cor-border: rgba(255, 255, 255, 0.05);
     /* para bordas 2 */
     --cor-border2: rgba(255, 0, 0, 0.3);
-    --fonte-principal: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --fonte-principal: 'Montserrat', Roboto, Helvetica, Arial, sans-serif;
+    --fonte-segundaria: 'Chakra Petch' Roboto, Helvetica, Arial, sans-serif;
 }
 
 html {
@@ -31,6 +32,11 @@ html {
 body {
     font-family: var(--fonte-principal);
     background-color: var(--cor-escura);
+    background-image: 
+        radial-gradient(var(--cor-card) 25%, transparent 26%),
+        radial-gradient(var(--cor-card) 25%, transparent 26%);
+    background-size: 16px 16px;
+    background-position: 0 0, 8px 8px;   
     color: var(--cor-texto);
     line-height: 1.6;
     overflow-x: hidden;
@@ -49,11 +55,13 @@ ul {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    background-color: var(--cor-escura);
+    background: rgba(5, 5, 5, 0.9);
     position: sticky;
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid var(--cor-card);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .logo strong {
@@ -157,10 +165,16 @@ ul {
 }
 
 .section-beneficios h2,
+.section-estrutura h2,
 .section-planos h2 {
     font-size: 2.5rem;
     color: var(--cor-texto);
     margin-bottom: 50px;
+    font-family: Chakra Petch, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.section-beneficios span {
+    color: var(--cor-primaria);
 }
 
 .container-cards {
@@ -198,12 +212,6 @@ ul {
 .section-estrutura {
     padding: 80px 5%;
     text-align: center;
-}
-
-.section-estrutura h2 {
-    font-size: 2.5rem;
-    color: var(--cor-texto);
-    margin-bottom: 50px;
 }
 
 
@@ -249,7 +257,7 @@ ul {
 .preco {
     font-size: 3rem;
     font-weight: 800;
-    color: var(--cor-texto-mutado);
+    color: var(--cor-primaria);
     margin: 20px 0;
 }
 
@@ -392,6 +400,7 @@ ul {
     margin: 0 auto;
     text-transform: uppercase;
     text-shadow: 2px 2px 10px var(--cor-primaria);
+    font-family: Chakra Petch, Roboto, Helvetica, Arial, sans-serif;
 }
 
 .section-matricula {
@@ -461,6 +470,27 @@ ul {
 .btn-enviar:hover {
     background-color: var(--cor-segundaria) ;
 }
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.redes-sociais a {
+    color: var(--cor-primaria);
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.redes-sociais a:hover {
+    color: var(--cor-texto);
+    transform: translateY(-5px) scale(1.15);
+    filter: drop-shadow(0 0 10px var(--cor-border2));
+}
+
 
 .rodape {
     background-color: #0a0a0a;
