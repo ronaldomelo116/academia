@@ -1,3 +1,7 @@
+/* =========================================
+   ME
+   ========================================= */
+
 const faqs = document.querySelectorAll('.item-faq');
 
 faqs.forEach(faq => {
@@ -22,6 +26,10 @@ faqs.forEach(faq => {
 
 });
 
+/* =========================================
+   FORMULARIO WHATSAPP
+   ========================================= */
+
 const btnEnviar = document.getElementById('btn-enviar-zap');
 
 btnEnviar.addEventListener('click', () => {
@@ -42,4 +50,38 @@ btnEnviar.addEventListener('click', () => {
     window.open(url, '_blank');
 
     document.getElementById('form-matricula').reset();
+});
+
+
+/* =========================================
+   MENU HAMBÚRGUER (MOBILE)
+   ========================================= */
+
+const btnMobile = document.getElementById('btn-mobile');
+const navMenu = document.querySelector('.navegation');
+const linksMenu = document.querySelectorAll('.navegation a');
+
+btnMobile.addEventListener('click', () => {
+
+    navMenu.classList.toggle('ativa');
+
+    const icone = btnMobile.querySelector('i');
+
+    if (navMenu.classList.contains('ativa')) {
+        icone.classList.remove('bi-list');
+        icone.classList.add('bi-x-lg');
+    } else {
+        icone.classList.remove('bi-x-lg');
+        icone.classList.add('bi-list');
+    }
+});
+
+linksMenu.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('ativa');
+
+        const icone = btnMobile.querySelector('i');
+        icone.classList.remove('bi-x-lg');
+        icone.classList.add('bi-list');
+    });
 });
