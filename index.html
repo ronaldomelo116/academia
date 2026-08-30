@@ -8,19 +8,16 @@
     <meta name="description"
         content="Junte-se à Academia Topfitnes. Equipamentos modernos, aulas em grupo e personal trainers focados no seu resultado. Agende uma aula experimental!">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=fitness_center" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=nest_clock_farsight_analog" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 
 <body>
 
-    <head class="main-header">
+    <header class="main-header">
         <div class="logo">
             <strong>Top<span>Fitness</span></strong>
         </div>
-        <nav>
+        <nav class="navegation">
             <ul>
                 <li><a href="#inicio">INÍCIO</a></li>
                 <li><a href="#beneficios">BENEFÍCIOS</a></li>
@@ -30,7 +27,7 @@
             </ul>
         </nav>
 
-    </head>
+    </header>
 
     <main>
         <!--seção hero-->
@@ -44,7 +41,7 @@
             </div>
 
             <div class="hero-img">
-                <img src="imagem-academia.png"
+                <img src="/img/imagem-academia-mulher-fazendo-exercicios.png"
                     alt="Mulher fazendo agachamento com peso em uma academia moderna e iluminada">
             </div>
 
@@ -59,13 +56,13 @@
                     <p>Maquinário importado de última geração, com manutenção rigorosa e biomecânica perfeita.</p>
                 </article>
 
-                <article>
-                    <h3><i class="bi bi-clock-fill"></i> Aberto 24 Horas</h3>
+                <article class="card">
+                    <h3><span class="material-symbols-outlined">schedule</span> Aberto 24 Horas</h3>
                     <p>Treine no seu ritmo e no seu horário. Nossa estrutura funciona todos os dias da semana.</p>
                 </article>
 
-                <article>
-                    <h3>🧘 Aulas Coletivas</h3>
+                <article class="card">
+                    <h3><span class="material-symbols-outlined">groups</span> Aulas Coletivas</h3>
                     <p>Mais de 20 modalidades incluindo Spinning, Cross Training, Yoga e Pilates inclusas no pacote.</p>
                 </article>
             </div>
@@ -104,8 +101,8 @@
 
             <div class="conteiner-faq">
                 <details class="item-faq">
-                    <summary>Vocês cobram taxa de matricula ou concelamento?</summary>
-                    <p>Não! Acreditamos na transparencia. Nossos planos não possuem taxa de adesão, anuidade escondida
+                    <summary>Vocês cobram taxa de matricula ou cancelamento?</summary>
+                    <p>Não! Acreditamos na transparência. Nossos planos não possuem taxa de adesão, anuidade escondida
                         ou multas absurdas de cancelamento (desde que respeitado o aviso prévio de 30 dias).</p>
                 </details>
 
@@ -134,7 +131,7 @@
             <h2>Dê o primeiro passo hoje</h2>
             <p>Deixe seus dados e nossa equipe entrará em contato via WhatsApp para agendar sua aula experimental.</p>
 
-            <form action="#" method="post" class="formulario-contato">
+            <form  id="form-matricula" action="#" method="post" class="form-contato">
                 <div class="grupo-input">
                     <label for="nome">Nome Completo</label>
                     <input type="text" id="nome" nome="nome" placeholder="Digite seu nome" required autocomplete="nome">
@@ -146,24 +143,25 @@
                         autocomplete="email">
                 </div>
 
-                <div class="grupo-input">
+<!--                 <div class="grupo-input">
                     <label for="telefone">WhatsApp/telefone</label>
                     <input type="tel" id="telefone" nome="telefone" placeholder="(84) 90000-0000" required
                         autocomplete="tel">
-                </div>
+                </div> -->
 
-                <button type="submit" class="btn-enviar">Quero me matricular</button>
+                <button type="button" id="btn-enviar-zap" class="btn-enviar">Quero me matricular</button>
             </form>
 
         </section>
 
     </main>
 
-    <footer class="rodape-principal">
+    <footer class="rodape">
         <p>&copy; 2026 Academia Top Fitness. Todos os direitos reservados.</p>
-        <p>Desenvolvido com foco em performance e segurança.</p>
+        <p>Desenvolvido por <span>Ronaldo Mello</span>.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

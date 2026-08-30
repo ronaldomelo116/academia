@@ -1,20 +1,26 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 :root {
-    /* Cores principais */
-    --cor-primaria: #ff3300; /* Vermelho neon (chama muita atenção para botões) */
-    --cor-escura: #121212;   /* Fundo principal da página (quase preto) */
-    --cor-card: #1e1e1e;     /* Fundo um pouco mais claro para destacar as caixas */
-    
-    /* Cores de texto */
-    --cor-texto: #f5f5f5;    /* Branco suave para não cansar a vista */
-    --cor-texto-mutado: #a0a0a0; /* Cinza para textos secundários e subtítulos */
-    
-    /* Tipografia */
+    /* Vermelho neon */
+    --cor-primaria: #ff3300;
+    /* vermelho neon mais claro */
+    --cor-segundaria: #e60000;
+    /* Fundo principal da página */
+    --cor-escura: #121212;
+    /* Fundo um pouco mais claro*/
+    --cor-card: #1e1e1e;
+    /* Branco suave */
+    --cor-texto: #f5f5f5;
+    /* Cinza para textos secundários e subtítulos */
+    --cor-texto-mutado: #a0a0a0;
+    /* para bordas */
+    --cor-border: rgba(255, 255, 255, 0.05);
+    /* para bordas 2 */
+    --cor-border2: rgba(255, 0, 0, 0.3);
     --fonte-principal: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -26,17 +32,433 @@ body {
     font-family: var(--fonte-principal);
     background-color: var(--cor-escura);
     color: var(--cor-texto);
-    line-height: 1.6; /* Espaçamento entre as linhas para melhorar a leitura */
-    
-    /* Previne a barra de rolagem horizontal (aquele erro clássico de site quebrando no celular) */
-    overflow-x: hidden; 
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Retira o sublinhado padrão de todos os links do site */
 a {
     text-decoration: none;
 }
-/* Remove as bolinhas das listas (usado no menu e nos planos) */
+
 ul {
     list-style: none;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--cor-escura);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--cor-card);
+}
+
+.logo strong {
+    font-size: 1.8rem;
+    color: var(--cor-texto);
+}
+
+.logo span {
+    color: var(--cor-primaria);
+}
+
+.navegation ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navegation a {
+    color: var(--cor-texto);
+    font-weight: 500;
+}
+
+.navegation a:hover {
+    color: var(--cor-primaria);
+}
+
+.btn-destaque {
+    background-color: transparent;
+    border: 2px solid var(--cor-primaria);
+    color: var(--cor-primaria) !important;
+    padding: 8px 20px;
+    border-radius: 6px;
+}
+
+.btn-destaque:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura) !important;
+}
+
+.section-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 5%;
+    min-height: 85vh;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--cor-texto);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: var(--cor-texto-mutado);
+    margin-bottom: 40px;
+    max-width: 90%;
+}
+
+.btn-call {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+.btn-call:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--cor-border2);
+
+}
+
+.hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-img img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--cor-border2);
+}
+
+.section-beneficios,
+.section-planos {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.section-beneficios h2,
+.section-planos h2 {
+    font-size: 2.5rem;
+    color: var(--cor-texto);
+    margin-bottom: 50px;
+}
+
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--cor-card);
+    padding: 40px 30px;
+    border-radius: 15px;
+    border: 1px solid var(--cor-border);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background-color: #242424;
+    border-bottom: 3px solid var(--cor-primaria);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--cor-primaria);
+}
+
+.card p {
+    color: var(--cor-texto-mutado);
+}
+
+.card-plano {
+    background-color: var(--cor-card);
+    padding: 50px 30px;
+    border-radius: 15px;
+    border: 1px solid var(--cor-border);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.card-plano:hover {
+    transform: translateY(-10px);
+}
+
+.preco {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--cor-texto-mutado);
+    margin: 20px 0;
+}
+
+.preco span {
+    font-size: 1.2rem;
+    color: var(--cor-texto-mutado);
+    font-weight: normal;
+}
+
+.card-plano ul {
+    margin-bottom: 40px;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.card-plano li {
+    margin-bottom: 15px;
+    color: var(--cor-texto-mutado);
+    border-bottom: 1px solid var(--cor-border);
+    padding-bottom: 10px;
+}
+
+.card-plano.destaque {
+    border: 2px solid var(--cor-primaria);
+    box-shadow: 0 10px 30px var(--cor-border2);
+    transform: scale(1.05);
+}
+
+.card-plano.destaque:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.btn-plano {
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 1px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+}
+
+.btn-plano:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+}
+
+.section-faq {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.faq-subtitulo {
+    color: var(--cor-texto-mutado);
+    margin-bottom: 50px;
+}
+
+.conteiner-faq {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.item-faq {
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-border);
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.item-faq summary {
+    padding: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--cor-texto);
+    cursor: pointer;
+    list-style: none;
+    border-bottom: 1px solid var(--cor-border2);
+    border-radius: 10px;
+}
+
+.item-faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.item-faq p {
+    padding: 20px 20px;
+    color: var(--cor-texto-mutado);
+    border-bottom: 1px solid var(--cor-border2);
+    border-radius: 10px;
+}
+
+.item-faq[open] p {
+    animation: abrirSuave 0.4s ease-in-out;
+}
+
+@keyframes abrirSuave {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.item-faq.closing p {
+    animation: fecharSuave 0.4s ease-in-out forwards;
+}
+
+@keyframes fecharSuave {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    
+}
+
+.section-matricula {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+.section-matricula p {
+    color: var(--cor-texto-mutado);
+    margin-bottom: 40px;
+}
+
+.form-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--cor-card);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid var(--cor-border2);
+    text-align: left;
+}
+
+.grupo-input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.grupo-input label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--cor-texto);
+}
+
+.grupo-input input {
+    background-color: var(--cor-escura);
+    border: 1px solid #333;
+    color: var(--cor-texto);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+    transition: all 0.3s ease;
+}
+
+.grupo-input input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 20px var(--cor-border2);
+}
+
+.btn-enviar {
+    width: 100%;
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: var(--cor-segundaria) ;
+}
+
+.rodape {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 40px 5%;
+    border-top: 1px solid var(--cor-border2);
+}
+
+.rodape p {
+    color: var(--cor-texto-mutado);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        padding: 15px 5%;
+        gap: 15px;
+    }
+
+    .navegation ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+    .navegation a {
+        font-size: 0.9rem;
+    }
+
+    .section-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+        min-height: auto;
+    }
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .section-beneficios, .section-planos, .section-faq, .section-matricula {
+        padding: 50px 5%;
+    }
+
+    .card-plano.destaque {
+        transform: scale(1);
+    }
+
+    .card-plano.destaque:hover {
+        transform: translateY(-5px);
+    }
 }
