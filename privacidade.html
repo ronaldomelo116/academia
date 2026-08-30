@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- Define o idioma do site como Português do Brasil -->
+<html lang="pt-br">
+
+<head>
+    <!-- Configura a codificação de caracteres para aceitar acentos (ç, ã, é) e caracteres especiais -->
+    <meta charset="UTF-8">
+    
+    <!-- Garante que a página se adapte perfeitamente ao tamanho da tela do celular (Responsividade) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título que aparece na aba do navegador -->
+    <title>Política de Privacidade | Academia UpFitness</title>
+
+    <!-- Importa o SEU arquivo CSS principal para manter as mesmas cores, variáveis e fontes -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Importa as fontes do Google (Montserrat e Chakra Petch) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/icon-192.png">
+    <link rel="apple-touch-icon" href="./img/icon-192.png">
+    <!-- Adicionamos um pequeno bloco de estilo local apenas para formatar os textos longos DESTA página, sem bagunçar o index.html -->
+    <style>
+        /* Centraliza a caixa de texto e limita a largura para não ficar ruim de ler em telas de computador grandes */
+        .conteiner-privacidade {
+            max-width: 800px;
+            margin: 50px auto; /* Centraliza a caixa no meio da tela e dá uma margem no topo/fundo */
+            padding: 40px 20px; /* Espaço interno para o texto não colar nas bordas (especial para celular) */
+            background-color: var(--cor-card); /* Puxa a cor cinza-escura configurada no seu style.css */
+            border-radius: 15px; /* Deixa as bordas da caixa arredondadas */
+            border: 1px solid var(--cor-border2); /* Aplica a mesma borda suave neon que usamos nos cards de benefícios */
+        }
+
+        /* Estiliza o Título Principal (H1) da página de privacidade */
+        .conteiner-privacidade h1 {
+            font-family: 'Chakra Petch', sans-serif; /* Mantém a fonte futurista dos seus títulos */
+            color: var(--cor-primaria); /* Aplica o vermelho neon do seu CSS */
+            text-align: center; /* Centraliza o título no meio da caixa */
+            margin-bottom: 30px; /* Cria um respiro antes de começar os textos */
+        }
+
+        /* Estiliza os subtítulos (H2) que dividem os assuntos das leis */
+        .conteiner-privacidade h2 {
+            color: var(--cor-texto); /* Usa a cor branca suave */
+            margin-top: 30px; /* Dá espaço em cima, afastando do parágrafo anterior */
+            margin-bottom: 15px; /* Dá espaço embaixo, afastando do próximo parágrafo */
+            font-size: 1.5rem; /* Deixa o subtítulo com um tamanho agradável */
+        }
+
+        /* Estiliza os parágrafos de texto normal */
+        .conteiner-privacidade p {
+            color: var(--cor-texto-mutado); /* Usa o cinza claro, ótimo para leituras longas sem cansar a vista */
+            margin-bottom: 15px; /* Afasta um parágrafo do outro */
+            line-height: 1.8; /* Aumenta a distância entre as linhas de texto (melhora 100% a leitura) */
+        }
+
+        /* Estiliza listas com bolinhas (bullet points) */
+        .conteiner-privacidade ul {
+            color: var(--cor-texto-mutado); /* Mesma cor do parágrafo */
+            margin-bottom: 15px; /* Espaço abaixo da lista */
+            padding-left: 20px; /* Empurra os itens da lista para a direita */
+            list-style-type: disc; /* Ativa a "bolinha" do lado de cada item */
+        }
+        
+        .conteiner-privacidade ul li {
+            margin-bottom: 8px; /* Espaçamento sutil entre cada bolinha da lista */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO: -->
+    <header class="main-header">
+        
+        <!-- Logo da academia -->
+        <div class="logo">
+            <strong>Up<span>Fitness</span></strong>
+        </div>
+
+        <!-- Navegação:-->
+        <nav class="navegation" style="position: static; transform: none; visibility: visible; opacity: 1;">
+            <ul style="flex-direction: row; background: transparent; border: none;">
+                <!-- O botão usa a classe btn-destaque para ficar com a borda vermelha e redireciona de volta ao site principal -->
+                <li><a href="index.html" class="btn-destaque" style="border-bottom: none;">VOLTAR AO INÍCIO</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- ÁREA PRINCIPAL DO CONTEÚDO (Onde vai o texto jurídico) -->
+    <main>
+        <!-- Inicia a caixa customizada que criamos ali no <style> -->
+        <section class="conteiner-privacidade">
+            
+            <h1>Política de Privacidade</h1>
+            
+            <!-- Data de vigência: Transmite transparência e profissionalismo -->
+            <p><em>Última atualização: Agosto de 2026</em></p>
+
+            <!-- Introdução amigável e simples -->
+            <p>A <strong>Academia Up Fitness</strong> valoriza a sua privacidade. Esta Política de Privacidade explica de forma clara, sem termos complicados, como lidamos com as informações que você nos fornece quando visita nosso site.</p>
+
+            <!-- Seção 1: O que coletamos -->
+            <h2>1. Informações que Coletamos</h2>
+            <p>Para agendar aulas experimentais e atender você da melhor forma, nós solicitamos informações básicas através do nosso formulário de contato, sendo elas:</p>
+            <ul>
+                <li>Nome Completo</li>
+                <li>Endereço de E-mail</li>
+            </ul>
+            <p>Estes dados são enviados de forma direta e segura para o nosso atendimento via WhatsApp. Não mantemos bancos de dados públicos ocultos armazenando o seu perfil.</p>
+
+            <!-- Seção 2: Para que usamos -->
+            <h2>2. Como Usamos Seus Dados</h2>
+            <p>As informações fornecidas por você são utilizadas exclusivamente para as seguintes finalidades:</p>
+            <ul>
+                <li>Responder às suas solicitações de agendamento de aulas experimentais.</li>
+                <li>Entrar em contato para tirar dúvidas pontuais sobre planos e serviços.</li>
+            </ul>
+            <p>Nós assumimos o compromisso de <strong>nunca vender, alugar ou compartilhar</strong> seus dados pessoais com empresas terceiras (como agências de telemarketing) sem o seu consentimento explícito.</p>
+
+            <!-- Seção 3: Cookies -->
+            <h2>3. Cookies e Tecnologias de Segurança</h2>
+            <p>Para garantir que o site funcione com alta velocidade e segurança contra ataques invasivos, utilizamos tecnologias padrão de infraestrutura (como a proteção do GitHub Pages/Firebase). Podemos usar cookies essenciais, que são arquivos minúsculos salvos no navegador, apenas para a estabilidade da página, sem rastrear seu comportamento em outros sites da internet.</p>
+
+            <!-- Seção 4: Direitos -->
+            <h2>4. Seus Direitos</h2>
+            <p>O controle é sempre seu. Você tem o direito de nos solicitar, a qualquer momento, a remoção do seu contato da nossa lista de atendimento no WhatsApp. Como não mantemos um sistema de "contas de usuário" logadas no site, todo o controle é feito de forma direta pelo canal oficial de comunicação.</p>
+
+            <!-- Seção 5: Alterações -->
+            <h2>5. Alterações nesta Política</h2>
+            <p>Nós podemos atualizar este documento periodicamente para acompanhar novas leis e tecnologias de proteção. Recomendamos que os usuários visitem esta página caso queiram se manter informados sobre como blindamos suas informações.</p>
+
+            <!-- Seção 6: Contato genérico -->
+            <h2>6. Fale Conosco</h2>
+            <p>Se tiver qualquer dúvida sobre como tratamos seus dados ou sobre nossos sistemas de segurança, entre em contato conosco através do e-mail oficial: <strong>contato@upfitness.com.br</strong> ou fale diretamente conosco no botão de WhatsApp.</p>
+
+        </section>
+    </main>
+
+    <!-- RODAPÉ: -->
+    <footer class="rodape">
+        <p>&copy; 2026 Academia Up Fitness. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <span>Ronaldo Mello</span>.</p>
+    </footer>
+
+</body>
+</html>
