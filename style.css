@@ -102,6 +102,7 @@ ul {
     color: var(--cor-escura) !important;
 }
 
+
 .section-hero {
     display: flex;
     align-items: center;
@@ -619,6 +620,8 @@ ul {
     .btn-destaque {
         margin: 10px 20px;
     }
+
+    
 
     .section-hero {
         flex-direction: column;

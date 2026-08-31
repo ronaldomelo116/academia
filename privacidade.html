@@ -68,6 +68,27 @@
         .conteiner-privacidade ul li {
             margin-bottom: 8px; /* Espaçamento sutil entre cada bolinha da lista */
         }
+        
+
+        @media (max-width: 768px) {
+            .main-header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px; 
+            }
+            .btn-destaque {
+                font-size: 0.8rem;
+                white-space: nowrap;
+                padding: 6px 12px;
+            }
+
+            .logo strong {
+                font-size: 1.4rem;
+            }
+        }
+
+
     </style>
 </head>
 
@@ -82,10 +103,10 @@
         </div>
 
         <!-- Navegação:-->
-        <nav class="navegation" style="position: static; transform: none; visibility: visible; opacity: 1;">
+        <nav class="nav-privacidade">
             <ul style="flex-direction: row; background: transparent; border: none;">
                 <!-- O botão usa a classe btn-destaque para ficar com a borda vermelha e redireciona de volta ao site principal -->
-                <li><a href="index.html" class="btn-destaque" style="border-bottom: none;">VOLTAR AO INÍCIO</a></li>
+                <li><a href="index.html" class="btn-destaque">VOLTAR</a></li>
             </ul>
         </nav>
 
