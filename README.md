@@ -4,6 +4,8 @@ Uma landing page profissional e altamente responsiva para academias, desenvolvid
 
 Este projeto foi construído para demonstrar habilidades avançadas em estilização, estruturação de layout e proteção de dados do usuário em aplicações web estáticas.
 
+confira o projeto ➤ <a href="https://ronaldomelo116.github.io/academia/" target="_blank">Academia Up Fitness</a>
+
 ## 🚀 Funcionalidades e UI/UX
 - **Design Responsivo:** Layout adaptável para qualquer tamanho de tela (Mobile-first).
 - **Menu Hambúrguer:** Navegação intuitiva em dispositivos móveis.
