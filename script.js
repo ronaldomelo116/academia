@@ -92,3 +92,32 @@ linksMenu.forEach(link => {
 if (window.top !== window.self) {
     window.top.location = window.self.location;
 }
+
+
+/* =========================================
+   CARROSSEL COM SCROLL HORIZONTAL
+   ========================================= */
+
+const wrapper = document.getElementById('carrossel-wrapper');
+const fita = document.getElementById('carrossel-fita');
+
+window.addEventListener('scroll', () => {
+    const rect = wrapper.getBoundingClientRect();
+    const maxScroll = wrapper.offsetHeight - window.innerHeight;
+    const scrollAtual = rect.top * -1;
+
+    if (scrollAtual >= 0 && scrollAtual <= maxScroll) {
+        const progresso = scrollAtual / maxScroll;
+        const distanciaTotal = fita.scrollWidth - window.innerWidth;
+        
+        fita.style.transform = `translateX(-${progresso * distanciaTotal}px)`;
+    }
+    else if (scrollAtual < 0) {
+        fita.style.transform = `translateX(0px)`;
+    }
+    
+    else {
+        const distanciaTotal = fita.scrollWidth - window.innerWidth;
+        fita.style.transform = `translateX(-${distanciaTotal}px)`;
+    }
+});

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academia Upfitness | Transforme seu corpo e sua mente</title>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; img-src 'self' data:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; img-src 'self' data:;">
     <meta name="description"
         content="Junte-se à Academia Topfitnes. Equipamentos modernos, aulas em grupo e personal trainers focados no seu resultado. Agende uma aula experimental!">
     <link rel="stylesheet" href="style.css">
@@ -58,7 +58,7 @@
             </div>
 
             <div class="hero-img">
-                <img src="./img/imagem-academia-mulher-fazendo-exercicios.png"
+                <img src="./img/imagem-academia-mulher-fazendo-exercicios.webp"
                     alt="Mulher fazendo agachamento com peso em uma academia moderna e iluminada">
             </div>
 
@@ -89,19 +89,25 @@
 
         <section id="estrutura" class="section-estrutura">
             <h2>Conheça Nossa Estrutura</h2>
-
-            <div class="galeria-grid">
-                <figure class="galeria-item">
-                    <img src="./img/Equipamentos-Premium.png" alt="Área de musculação com pesos livres">
-                </figure>
-                <figure class="galeria-item">
-                    <img src="./img/imagem-da-academia-aulas-coletivas.png" alt="Aulas coletivas com vários alunos">
-                </figure>
-                <figure class="galeria-item">
-                    <img src="./img/Equipamentos-Premium.png" alt="Sala ampla para aulas coletivas">
-                </figure>
+            <div id="carrossel-wrapper" class="carrossel-wrapper">
+                <div class="carrossel-camera">
+                    <div id="carrossel-fita" class="carrossel-fita">
+                        <figure class="galeria-item">
+                            <img src="./img/Equipamentos-Premium.webp" alt="Área de musculação com pesos livres">
+                        </figure>
+                        <figure class="galeria-item">
+                            <img src="./img/imagem-da-academia-aulas-coletivas.webp"
+                                alt="Aulas coletivas com vários alunos">
+                        </figure>
+                        <figure class="galeria-item">
+                            <img src="./img/imagem-da-academia-estruturas.webp" alt="Sala ampla com equipamentos">
+                        </figure>
+                        <figure class="galeria-item">
+                            <img src="./img/imagem-academia-homem-fazendo-exercicios.webp" alt="homem fazendo exercício no cross">
+                        </figure>
+                    </div>
+                </div>
             </div>
-
         </section>
 
         <!-- seção planos-->
@@ -215,7 +221,8 @@
                 <i class="bi bi-youtube"></i>
             </a>
         </div>
-        <p><a href="privacidade.html" target="_blank" style="color: var(--cor-texto-mutado); text-decoration: underline;">Política de Privacidade</a></p>
+        <p><a href="privacidade.html" target="_blank"
+                style="color: var(--cor-texto-mutado); text-decoration: underline;">Política de Privacidade</a></p>
         <p>&copy; 2026 Academia Up Fitness. Todos os direitos reservados.</p>
         <p>Desenvolvido por <span>Ronaldo Mello</span>.</p>
     </footer>
