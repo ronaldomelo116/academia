@@ -358,8 +358,11 @@ ul {
     font-size: 1.1rem;
     font-weight: bold;
     color: var(--cor-texto);
-    cursor: pointer;
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
     border-bottom: 1px solid var(--cor-border2);
     border-radius: 10px;
 }
@@ -367,6 +370,20 @@ ul {
 .item-faq summary::-webkit-details-marker {
     display: none;
 }
+
+.item-faq summary::after {
+    content: '+';
+    color: var(--cor-primaria);
+    font-size: 1.8rem;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.item-faq[open] summary::after {
+    content: '-';
+    transform: rotate(180deg);
+}
+
 
 .item-faq p {
     padding: 20px 20px;
