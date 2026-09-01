@@ -175,6 +175,7 @@ ul {
     font-family: Chakra Petch, Roboto, Helvetica, Arial, sans-serif;
 }
 
+
 .section-beneficios span {
     color: var(--cor-primaria);
 }
@@ -228,7 +229,14 @@ ul {
     height: 70vh;
     overflow: hidden;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carrossel-camera h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .carrossel-fita {
